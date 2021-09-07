@@ -24,6 +24,8 @@
     --clr-red-light: hsl(360, 71%, 66%);
     --clr-green-dark: hsl(125, 67%, 44%);
     --clr-green-light: hsl(125, 71%, 66%);
+    --clr-red-special: #B4345C;
+    --clr-grey-special: #EAE6EB;
     --clr-black: #222;
     --transition: all 0.3s linear;
     --spacing: 0.1rem;
