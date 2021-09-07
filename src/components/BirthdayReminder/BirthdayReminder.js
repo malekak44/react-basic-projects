@@ -8,22 +8,16 @@ export default function BirthdayReminder() {
         document.title = "Birthday Reminder";
     }
     const [persons, setPersons] = useState(birthdays);
+    const [clearBtnDisplay, setClearBtnDisplay] = useState('show');
+    const [getBtnDisplay, setGetBtnDisplay] = useState('hide');
 
-    const handleClick = () => {
-        const btn = document.getElementById("btn");
-        btn.innerText = "clear all" ? "get all" : "clear all";
-        if (setPersons(birthdays)) {
-            setPersons([]);
-        } else {
-            setPersons(birthdays);
-        }
-    }
     return (
         <main>
             <section className='container'>
                 <h3>{persons.length} birthdays today</h3>
-                {persons.map(person => <List key={person.id} person={person}></List>)}
-                <button id="btn" type="button" onClick={handleClick}>clear all</button>
+                <List persons={persons} />
+                <button className={clearBtnDisplay} onClick={() => { setPersons([]); setClearBtnDisplay('hide'); setGetBtnDisplay('show'); }}>clear all</button>
+                <button className={getBtnDisplay} onClick={() => { setPersons(birthdays); setGetBtnDisplay('hide'); setClearBtnDisplay('show') }}>get all</button>
             </section>
         </main>
     )

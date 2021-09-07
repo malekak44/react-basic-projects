@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import BirthdayReminder from './components/BirthdayReminder/BirthdayReminder';
 
 export default function App() {

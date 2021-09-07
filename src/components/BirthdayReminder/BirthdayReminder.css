@@ -1,6 +1,6 @@
 body {
     background: var(--clr-pink);
-    color: var(--clr-grey-9);
+    color: #102a42;
 }
 
 .container {
@@ -45,7 +45,6 @@ body {
 
 .container button {
     color: var(--clr-white);
-    display: block;
     width: 100%;
     border-color: transparent;
     background: var(--clr-pink);
@@ -57,4 +56,12 @@ body {
     border-radius: var(--radius);
     outline: 1px solid rgba(242, 138, 178, 0.8);
     cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
