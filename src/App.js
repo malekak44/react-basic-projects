@@ -1,9 +1,10 @@
 import React from 'react'
+import BirthdayReminder from './components/BirthdayReminder/BirthdayReminder';
 
 export default function App() {
     return (
         <div>
-            <h1>Love</h1>
+            <BirthdayReminder />
         </div>
     )
 }
