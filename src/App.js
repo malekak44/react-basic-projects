@@ -1,9 +1,10 @@
 import React from 'react';
-import SideBar from './components/SideBar/SideBar';
+import Tours from './components/Tours/Tours';
+
 
 
 export default function App() {
     return (
-        <SideBar />
+        <Tours />
     )
 }

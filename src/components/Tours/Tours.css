@@ -3,14 +3,10 @@ body {
     color: var(--clr-grey-9);
 }
 
-main {
+.main {
     width: 90vw;
-    max-width: var(--fixed-width);
+    max-width: 620px !important;
     margin: 5rem auto;
-}
-
-.loading {
-    text-align: center;
 }
 
 .title {
