@@ -1,10 +1,9 @@
 import React from 'react';
-import BirthdayReminder from './components/BirthdayReminder/BirthdayReminder';
+import SideBar from './components/SideBar/SideBar';
+
 
 export default function App() {
     return (
-        <div>
-            <BirthdayReminder />
-        </div>
+        <SideBar />
     )
 }

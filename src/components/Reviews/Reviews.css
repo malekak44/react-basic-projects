@@ -2,11 +2,6 @@
     --fixed-width: 620px;
 }
 
-body {
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-1);
-}
-
 main {
     min-height: 100vh;
     display: grid;
