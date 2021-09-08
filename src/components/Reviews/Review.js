@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import reviews from '../../data/reviews';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Review() {
     const [index, setIndex] = useState(0);
