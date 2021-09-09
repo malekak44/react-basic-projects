@@ -1,10 +1,8 @@
 import React from 'react';
-import Tours from './components/Tours/Tours';
-
-
+import GroceryBud from './components/GroceryBud/GroceryBud';
 
 export default function App() {
     return (
-        <Tours />
+        <GroceryBud />
     )
 }
