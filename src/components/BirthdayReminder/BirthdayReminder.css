@@ -1,5 +1,5 @@
 body {
-    background: var(--clr-pink);
+    background: var(--clr-pink) !important;
     color: #102a42;
 }
 

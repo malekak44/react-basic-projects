@@ -3,7 +3,7 @@ import './Accordion.css';
 import data from '../../data/questions';
 import Question from './Question';
 
-export default function App() {
+export default function Accordion() {
     const [questions, setQuestions] = useState(data);
 
     return (

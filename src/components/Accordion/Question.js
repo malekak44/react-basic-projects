@@ -10,7 +10,7 @@ export default function Question({ question }) {
             <header>
                 <h4>{title}</h4>
                 <button className="btn" onClick={() => setShowInfo(!showInfo)}>
-                    {showInfo ? <FaMinus /> : <FaPlus />}
+                    {showInfo ? <FaMinus fill="#CF8DA3" /> : <FaPlus fill="#CF8DA3" />}
                 </button>
             </header>
             <p>{showInfo && info}</p>

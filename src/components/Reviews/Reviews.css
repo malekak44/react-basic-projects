@@ -1,5 +1,5 @@
 :root {
-    --fixed-width: 620px;
+    --fixed-width: 620px !important;
 }
 
 main {

@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #4B145B;
+    background-color: #4B145B !important;
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
 }
 
 .question {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 0.5rem;
     border: 2px solid var(--clr-grey-special);
     margin-bottom: 1rem;
     border-radius: var(--radius);

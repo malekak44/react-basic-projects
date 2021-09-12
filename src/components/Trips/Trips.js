@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Tours from './Tours';
-import './AllTours.css';
+import './Trips.css';
 
-export default function AllTours() {
+export default function Trips() {
     const [loading, setLoading] = useState(true);
     const [tours, setTours] = useState([]);
 
