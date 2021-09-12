@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import data from './data';
 import Review from './Review';
-import './Reviews.css';
 
 export default function Reviews() {
+    const [reviews, setReviews] = useState(data);
+
     return (
         <main>
-            <section className='container'>
-                <div className='title'>
-                    <h2>our reviews</h2>
-                    <div className='underline'></div>
+            <section className="container">
+                <div className="title">
+                    <h2>Our Reviews</h2>
+                    <div className="underline"></div>
                 </div>
-                <Review />
+                <Review reviews={reviews} />
             </section>
         </main>
     )

@@ -1,27 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import './Slider.css';
 import data from '../../data/people';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import './Slider.css';
+import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
 export default function Slider() {
     const [people, setPeople] = useState(data);
-    const [index, setIndex] = useState(0);
+    const [index, setindex] = useState(0);
+
+    const checkNumber = (number) => {
+        let lastIndex = data.length - 1;
+        if (number < 0) {
+            return lastIndex;
+        }
+        if (number > lastIndex) {
+            return 0;
+        }
+        return number;
+    }
 
     useEffect(() => {
-        const lastIndex = people.length - 1;
-        if (index < 0) {
-            setIndex(lastIndex);
-        }
-        if (index > lastIndex) {
-            setIndex(0);
-        }
-    }, [index, people]);
+        checkNumber(index);
+    }, [index]);
 
     useEffect(() => {
         let slider = setInterval(() => {
-            setIndex(index + 1);
-        }, 5000);
+            setindex(checkNumber(index + 1));
+        }, 3000);
+
         return () => {
             clearInterval(slider);
         }
@@ -30,40 +35,35 @@ export default function Slider() {
     return (
         <section className="section">
             <div className="title">
-                <h2>
-                    <span>/</span>reviews
-                </h2>
+                <h2><span>/</span>Reviews</h2>
+                <div className="underline"></div>
             </div>
             <div className="section-center">
                 {people.map((person, personIndex) => {
-                    const { id, name, image, title, quote } = person;
+                    const { id, image, name, title, quote } = person;
 
-                    let position = "nextSlide";
+                    let slide = "nextSlide";
+
                     if (personIndex === index) {
-                        position = "activeSlide";
+                        slide = "activeSlide";
                     }
 
                     if (personIndex === index - 1 || (index === 0 && personIndex === people.length - 1)) {
-                        position = 'lastSlide';
+                        slide = "lastSlide"
                     }
 
                     return (
-                        <article className={position} key={id}>
+                        <article key={id} className={slide}>
                             <img src={image} alt={name} className="person-img" />
                             <h4>{name}</h4>
                             <p className="title">{title}</p>
                             <p className="text">{quote}</p>
-                            <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                            <FaQuoteRight className="icon" />
                         </article>
                     )
                 })}
-
-                <button className="prev" onClick={() => setIndex(index - 1)}>
-                    <FontAwesomeIcon icon={faChevronLeft} />
-                </button>
-                <button className="next" onClick={() => setIndex(index + 1)}>
-                    <FontAwesomeIcon icon={faChevronRight} />
-                </button>
+                <button className="prev" onClick={() => setindex(checkNumber(index - 1))}><FaChevronLeft /></button>
+                <button className="next" onClick={() => setindex(checkNumber(index + 1))}><FaChevronRight /></button>
             </div>
         </section>
     )

@@ -1,8 +1,8 @@
 import React from 'react';
-import GroceryBud from './components/GroceryBud/GroceryBud';
+import Slider from './components/Slider/Slider';
 
 export default function App() {
     return (
-        <GroceryBud />
+        <Slider/>
     )
 }

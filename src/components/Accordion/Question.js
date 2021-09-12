@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FaMinus, FaPlus } from 'react-icons/fa';
 
-export default function Question({ title, info }) {
+export default function Question({ question }) {
+    const { title, info } = question;
     const [showInfo, setShowInfo] = useState(false);
+
     return (
-        <article className='question'>
+        <article className="question">
             <header>
                 <h4>{title}</h4>
-                <button className='btn' onClick={() => setShowInfo(!showInfo)}>
-                    {showInfo ? <FontAwesomeIcon icon={faMinus} /> : <FontAwesomeIcon icon={faPlus} />}
+                <button className="btn" onClick={() => setShowInfo(!showInfo)}>
+                    {showInfo ? <FaMinus /> : <FaPlus />}
                 </button>
             </header>
-            {showInfo && <p>{info}</p>}
+            <p>{showInfo && info}</p>
         </article>
     )
 }
