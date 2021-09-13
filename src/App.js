@@ -1,16 +1,18 @@
 import React from 'react';
-import ColorGenerator from './components/ColorGenerator/ColorGenerator';
-//  Accordion ==> done;
-//  BirthdayReminder ==> done;
-//  LoremIpsum ==> done;
-//  Reviews ==> done;
+import SideModal from './components/SideModal/SideModal';
 //  Menu ==> done;
-//  Slider ==> done;
 //  Tabs ==> done;
-//  Trips  ==> done;
+//  Trips ==> done;
+//  Navbar ==> done;
+//  Slider ==> done;
+//  Reviews ==> done;
+//  Accordion ==> done;
+//  LoremIpsum ==> done;
+//  ColorGenerator ==> done;
+//  BirthdayReminder ==> done;
 
 export default function App() {
     return (
-        <ColorGenerator />
+        <SideModal />
     )
 }

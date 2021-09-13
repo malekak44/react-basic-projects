@@ -16,6 +16,7 @@
 }
 
 input {
+    outline: none;
     border-color: transparent;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
@@ -33,6 +34,7 @@ input {
     text-transform: capitalize;
     color: var(--clr-white);
     cursor: pointer;
+    outline: none;
 }
 
 @media screen and (max-width: 576px) {
@@ -48,6 +50,10 @@ input {
 
 input.error {
     border: 2px solid var(--clr-red-dark);
+}
+
+input.normal {
+    border: 2px solid var(--clr-green-light);
 }
 
 .colors {
