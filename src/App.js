@@ -1,5 +1,6 @@
 import React from 'react';
-import Cart from './components/Cart/Cart';
+import CockTails from './components/CockTails/CockTails';
+//  Cart ==> done;
 //  Menu ==> done;
 //  Tabs ==> done;
 //  Trips ==> done;
@@ -16,6 +17,6 @@ import Cart from './components/Cart/Cart';
 
 export default function App() {
     return (
-        <Cart />
+        <CockTails />
     )
 }
