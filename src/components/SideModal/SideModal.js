@@ -1,16 +1,22 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa';
+import { useGlobalContext } from './Context';
+import Modal from './Modal';
 import SideBar from './SideBar';
 import './SideModal.css';
 
 export default function SideModal() {
+    const { openSidebar, openModal } = useGlobalContext();
+
     return (
         <>
             <main>
-                <button class="sidebar-toggle">
-
+                <button className="sidebar-toggle" onClick={openSidebar}>
+                    <FaBars />
                 </button>
-                <button class="btn">show modal</button>
-            </main><div class="modal-overlay"><div class="modal-container"><h3>modal content</h3><button class="close-modal-btn"></button></div></div>
+                <button className="btn" onClick={openModal}>show modal</button>
+            </main>
+            <Modal />
             <SideBar />
         </>
     )

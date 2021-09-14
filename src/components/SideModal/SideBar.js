@@ -1,25 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import { social } from '../../data/nav';
-import { FaHome, FaUserFriends, FaFolderOpen, FaCalendarAlt, FaWpforms } from 'react-icons/fa';
+import { useGlobalContext } from './Context';
+import { FaHome, FaUserFriends, FaFolderOpen, FaCalendarAlt, FaWpforms, FaTimes } from 'react-icons/fa';
 
 export default function SideBar() {
-    return (
-        <aside class="sidebar show-sidebar">
-            <div class="sidebar-header">
-                <img src={logo} class="logo" alt="coding" />
-                <button class="close-btn">
+    const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
+    return (
+        <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
+            <div className="sidebar-header">
+                <img src={logo} className="logo" alt="coding" />
+                <button className="close-btn" onClick={closeSidebar}>
+                    <FaTimes />
                 </button>
             </div>
-            <ul class="links">
+            <ul className="links">
                 <li><a href="/"><FaHome />home</a></li>
                 <li><a href="/team"><FaUserFriends />team</a></li>
                 <li><a href="/projects"><FaFolderOpen />projects</a></li>
                 <li><a href="/calendar"><FaCalendarAlt />calendar</a></li>
                 <li><a href="/documents"><FaWpforms />documents</a></li>
             </ul>
-            <ul class="social-icons">
+            <ul className="social-icons">
                 {social.map((link) => {
                     const { id, url, icon } = link;
                     return (
