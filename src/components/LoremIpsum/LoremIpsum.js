@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LoremIpsum.css';
+import './LoremIpsum.scss';
 import data from '../../data/lorem';
 
 export default function LoremIpsum() {
@@ -21,7 +21,7 @@ export default function LoremIpsum() {
     }
 
     return (
-        <section className="section-center">
+        <section className="section-center" id="lorem-ipsum">
             <h3>TIRED OF BORING LOREM IPSUM?</h3>
             <form className="lorem-form" onSubmit={handleSubmit}>
                 <label htmlFor="amount">paragraphs:</label>

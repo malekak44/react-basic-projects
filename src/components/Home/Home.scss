@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Montserrat:wght@500&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    min-height: 40vh;
+    background: #fff;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 5rem 0px;
+}
+
+.home-title {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 0px;
+}
+
+.home-title h2,
+.project-footer h5 {
+    font-size: 2.441rem;
+    margin: 0 0 1.38rem;
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    line-height: 1.3;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 7rem;
+    height: 0.25rem;
+    background: var(--clr-pink);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projects {
+    width: 90vw;
+    padding: 4rem 0;
+    max-width: 1120px;
+    margin: 0px auto 2rem;
+    display: grid;
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}
+
+.project {
+    border-radius: 0.25rem;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease-in-out all;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.project-img-div img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.project-footer {
+    color: #222;
+    text-align: center;
+    padding: 1rem 1.25rem;
+    background: var(--white);
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.project-footer h5 {
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+@media (min-width: 992px) {
+    header {
+        min-height: 60vh;
+    }
+}

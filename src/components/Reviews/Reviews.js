@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import data from '../../data/reviews';
 import Review from './Review';
-import './Reviews.css';
+import './Reviews.scss';
 
 export default function Reviews() {
     const [reviews, setReviews] = useState(data);
@@ -37,7 +37,7 @@ export default function Reviews() {
     }
 
     return (
-        <main>
+        <main id="reviews">
             <section className="container">
                 <div className="title">
                     <h2>Our Reviews</h2>

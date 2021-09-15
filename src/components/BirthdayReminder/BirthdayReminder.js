@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './BirthdayReminder.css';
+import './BirthdayReminder.scss';
 import birthdays from '../../data/birthdays';
 import List from './List';
 
@@ -7,7 +7,7 @@ export default function BirthdayReminder() {
     const [persons, setPersons] = useState(birthdays);
 
     return (
-        <main>
+        <main id="birthday">
             <div className="container">
                 <h3>{persons.length} birthdays today</h3>
                 <List persons={persons} />

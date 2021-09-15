@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { links, social } from '../../data/nav';
 import logo from './logo.svg';
-import './Navbar.css';
+import './Navbar.scss';
 
 export default function Navbar() {
     const [showLinks, setShowLinks] = useState(false);
@@ -23,7 +23,7 @@ export default function Navbar() {
     }, [showLinks]);
 
     return (
-        <nav>
+        <nav id="navbar">
             <div className="nav-center">
                 <div className="nav-header">
                     <img src={logo} className="logo" alt="logo" />

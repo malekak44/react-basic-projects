@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Values from 'values.js';
-import './ColorGenerator.css';
+import './ColorGenerator.scss';
 import Color from './Color';
 
 export default function ColorGenerator() {
@@ -22,7 +22,7 @@ export default function ColorGenerator() {
     }
 
     return (
-        <>
+        <div id="color-generator">
             <section className="container">
                 <h3>color generator</h3>
                 <form onSubmit={handleSubmit}>
@@ -35,6 +35,6 @@ export default function ColorGenerator() {
                     list.map((color, index) => <Color key={index} {...color} index={index} hexColor={color.hex} />)
                 }
             </section>
-        </>
+        </div>
     )
 }

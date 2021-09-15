@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cart.css';
+import './Cart.scss';
 import { useGlobalContext } from './Context';
 import Navbar from './Navbar';
 import CartContainer from './CartContainer';
@@ -14,9 +14,9 @@ export default function Cart() {
         )
     }
     return (
-        <>
+        <div id="cart">
             <Navbar />
             <CartContainer />
-        </>
+        </div>
     )
 }

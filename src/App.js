@@ -1,22 +1,23 @@
 import React from 'react';
-import CockTails from './components/CockTails/CockTails';
-//  Cart ==> done;
-//  Menu ==> done;
-//  Tabs ==> done;
-//  Trips ==> done;
-//  Navbar ==> done;
-//  Slider ==> done;
-//  Reviews ==> done;
-//  SideModal ==> done;
-//  Accordion ==> done;
-//  LoremIpsum ==> done;
-//  GroceryBud ==> done;
-//  StripeMenu ==> done;
-//  ColorGenerator ==> done;
-//  BirthdayReminder ==> done;
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+import Home from './components/Home/Home';
+import Project from './components/Home/Project';
 
 export default function App() {
     return (
-        <CockTails />
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/:title">
+                    <Project />
+                </Route>
+            </Switch>
+        </Router>
     )
 }

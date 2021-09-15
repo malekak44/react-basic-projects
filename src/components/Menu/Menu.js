@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Categories from './Categories';
 import data from '../../data/foods';
 import Food from './Food';
-import './Menu.css';
+import './Menu.scss';
 const categories = ["all", ...new Set(data.map(data => data.category))];
 
 export default function Menu() {
@@ -18,7 +18,7 @@ export default function Menu() {
 
     return (
         <main>
-            <section className="menu section">
+            <section className="menu section" id="menubar">
                 <div className="title">
                     <h2>Our Menu</h2>
                     <div className="underline"></div>

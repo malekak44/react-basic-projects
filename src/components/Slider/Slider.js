@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import data from '../../data/people';
-import './Slider.css';
+import './Slider.scss';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
 export default function Slider() {
@@ -33,7 +33,7 @@ export default function Slider() {
     }, [index]);
 
     return (
-        <section className="section">
+        <section className="section" id="slider">
             <div className="title">
                 <h2><span>/</span>Reviews</h2>
                 <div className="underline"></div>

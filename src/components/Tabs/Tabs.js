@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import './Tabs.css';
+import './Tabs.scss';
 
 export default function Tabs() {
     const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ export default function Tabs() {
     const { title, dates, company, duties } = jobs[index];
 
     return (
-        <section className="section">
+        <section className="section" id="tabs">
             <div className="title">
                 <h2>experience</h2>
                 <div className="underline"></div>

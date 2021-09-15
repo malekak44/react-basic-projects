@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Alert from './Alert';
-import './GroceryBud.css';
+import './GroceryBud.scss';
 import List from './List';
 
 const getLocalStorage = () => {
@@ -71,7 +71,7 @@ export default function GroceryBud() {
     }, [list]);
 
     return (
-        <section className='section-center'>
+        <section className='section-center' id="grocery-bud">
             <form className='grocery-form' onSubmit={handleSubmit}>
                 {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
                 <h3>grocery bud</h3>

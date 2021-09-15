@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Tours from './Tours';
-import './Trips.css';
+import './Trips.scss';
 
 export default function Trips() {
     const [loading, setLoading] = useState(true);
@@ -52,7 +52,7 @@ export default function Trips() {
     }
 
     return (
-        <main>
+        <main id="trips">
             <section>
                 <div className="title">
                     <h2>Our Tours</h2>
