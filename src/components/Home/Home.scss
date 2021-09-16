@@ -45,7 +45,8 @@
             }
 
             .header-btn {
-                display: inline-block;
+                margin:   0 auto 3rem;
+                display: block;
                 background: #6A67E8;
                 color: var(--mainWhite);
                 font-weight: 500;
@@ -61,6 +62,11 @@
 
                 &:hover {
                     background: #FAB80A;
+                }
+
+                @media (min-width: 992px) {
+                    margin: 0;
+                    display: inline-block;
                 }
             }
         }
