@@ -27,6 +27,12 @@
         max-width: var(--max-width);
 
         .text {
+            text-align: center;
+
+            @media (min-width: 992px) {
+                text-align: left;
+            }
+
             h1 {
                 font-size: 3.052rem;
                 color: #222;
@@ -45,7 +51,7 @@
             }
 
             .header-btn {
-                margin:   0 auto 3rem;
+                margin: 0 auto 3rem;
                 display: block;
                 background: #6A67E8;
                 color: var(--mainWhite);
