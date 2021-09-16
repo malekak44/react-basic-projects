@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../../data/reviews';
 import Review from './Review';
 import './Reviews.scss';
@@ -6,6 +6,10 @@ import './Reviews.scss';
 export default function Reviews() {
     const [reviews, setReviews] = useState(data);
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        setReviews(data);
+    }, []);
 
     const checkNumber = (number) => {
         let lastIndex = reviews.length - 1;

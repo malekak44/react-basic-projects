@@ -7,6 +7,10 @@ export default function Slider() {
     const [people, setPeople] = useState(data);
     const [index, setindex] = useState(0);
 
+    useEffect(() => {
+        setPeople(data);
+    }, []);
+
     const checkNumber = (number) => {
         let lastIndex = data.length - 1;
         if (number < 0) {

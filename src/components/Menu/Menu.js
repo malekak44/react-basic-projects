@@ -17,8 +17,8 @@ export default function Menu() {
     }
 
     return (
-        <main>
-            <section className="menu section" id="menubar">
+        <main id="menubar">
+            <section className="menu section">
                 <div className="title">
                     <h2>Our Menu</h2>
                     <div className="underline"></div>

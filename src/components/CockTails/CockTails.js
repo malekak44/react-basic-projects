@@ -5,7 +5,6 @@ import { AppProvider } from './Context';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Error from './pages/Error';
 import SingleCocktail from './pages/SingleCocktail';
 
 export default function CockTails() {
@@ -15,17 +14,14 @@ export default function CockTails() {
                 <Router>
                     <Navbar />
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/Cocktails">
                             <Home />
                         </Route>
-                        <Route path="/cocktail/:id">
+                        <Route path="/Cocktails/cocktail/:id">
                             <SingleCocktail />
                         </Route>
-                        <Route path="/about">
+                        <Route path="/Cocktails/about">
                             <About />
-                        </Route>
-                        <Route path="*">
-                            <Error />
                         </Route>
                     </Switch>
                 </Router>

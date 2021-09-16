@@ -6,15 +6,15 @@ export default function Navbar() {
     return (
         <nav className='navbar'>
             <div className='nav-center'>
-                <Link to='/'>
+                <Link to='/Cocktails'>
                     <img src={logo} alt='cocktail db logo' className='logo' />
                 </Link>
                 <ul className='nav-links'>
                     <li>
-                        <Link to='/'>home</Link>
+                        <Link to='/Cocktails'>home</Link>
                     </li>
                     <li>
-                        <Link to='/about'>about</Link>
+                        <Link to='/Cocktails/about'>about</Link>
                     </li>
                 </ul>
             </div>

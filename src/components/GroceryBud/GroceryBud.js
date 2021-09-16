@@ -71,7 +71,7 @@ export default function GroceryBud() {
     }, [list]);
 
     return (
-        <section className='section-center' id="grocery-bud">
+        <section id="grocery-bud">
             <form className='grocery-form' onSubmit={handleSubmit}>
                 {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
                 <h3>grocery bud</h3>

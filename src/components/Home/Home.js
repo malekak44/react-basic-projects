@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import data from './data';
 import './Home.scss';
+import girl from './images/girl.jpg';
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -10,17 +11,23 @@ export default function Home() {
         setProjects(data);
     }, []);
 
-
     return (
         <>
-            <header>
-
+            <header className="home-header">
+                <div className="header-content">
+                    <div className="text">
+                        <h1>React Basic Projects</h1>
+                        <p>These are some of the basic projects of React that I have practiced. Without creating projects you cannot learn any programming language. So Practice is the main thing.</p>
+                        <button className="header-btn">Source Code</button>
+                    </div>
+                    <img src={girl} alt="girl" />
+                </div>
             </header>
             <div className="home-title">
                 <h2>Basic Projects</h2>
-                <div className="underline"></div>
+                <div className="home-underline"></div>
             </div>
-            <main>
+            <main id="home">
                 <section id="projects">
                     {projects.map(project => <Link to={`/${project.title}`} key={project.id}>
                         <article className="project">
@@ -34,6 +41,9 @@ export default function Home() {
                     </Link>)}
                 </section>
             </main>
+            <footer className="home-footer">
+                <p>&copy;Copyright 2021 | All rights reserved</p>
+            </footer>
         </>
     );
 }

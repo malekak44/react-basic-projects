@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Accordion.scss';
 import data from '../../data/questions';
 import Question from './Question';
 
 export default function Accordion() {
-    const [questions, setQuestions] = useState(data);
+    const [questions, setQuestions] = useState([]);
+
+    useEffect(() => {
+        setQuestions(data);
+    }, []);
 
     return (
         <main id="accordion">

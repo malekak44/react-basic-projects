@@ -13,97 +13,69 @@ import sidebar from './images/sidebar.webp';
 import stripe from './images/stripe.webp';
 import cart from './images/cart.webp';
 import cocktail from './images/cocktail.webp';
-import BirthdayReminder from '../BirthdayReminder/BirthdayReminder';
-import Trips from '../Trips/Trips';
-import CockTails from '../CockTails/CockTails';
-import Main from '../Cart/Main';
-import StripeMenu from '../StripeMenu/StripeMenu';
-import Reviews from '../Reviews/Reviews';
-import Accordion from '../Accordion/Accordion';
-import Menu from '../Menu/Menu';
-import Tabs from '../Tabs/Tabs';
-import Slider from '../Slider/Slider';
-import LoremIpsum from '../LoremIpsum/LoremIpsum';
-import ColorGenerator from '../ColorGenerator/ColorGenerator';
-import GroceryBud from '../GroceryBud/GroceryBud';
-import Navbar from '../CockTails/components/Navbar';
+
 
 const projects = [
     {
         id: 1,
         title: "Birthday Reminder",
-        image: birthday,
-        component: <BirthdayReminder />
+        image: birthday
     }, {
         id: 2,
         title: "Trips",
         image: trips,
-        component: <Trips />
     }, {
         id: 3,
         title: "Reviews",
-        image: reviews,
-        component: <Reviews />
+        image: reviews
     }, {
         id: 4,
         title: "Accordion",
-        image: accordion,
-        component: <Accordion />
+        image: accordion
     }, {
         id: 5,
         title: "Menu",
-        image: menu,
-        component: <Menu />
+        image: menu
     }, {
         id: 6,
         title: "Tabs",
-        image: tabs,
-        component: <Tabs />
+        image: tabs
     }, {
         id: 7,
         title: "Slider",
-        image: slider,
-        component: <Slider />
+        image: slider
     }, {
         id: 8,
         title: "Lorem Ipsum Generator",
-        image: lorem,
-        component: <LoremIpsum />
+        image: lorem
     }, {
         id: 9,
         title: "Color Shades Generator",
-        image: color,
-        component: <ColorGenerator />
+        image: color
     }, {
         id: 10,
         title: "Grocery Bud",
-        image: grocery,
-        component: <GroceryBud />
+        image: grocery
     }, {
         id: 11,
         title: "Navbar",
-        image: navbar,
-        component: <Navbar />
+        image: navbar
     }, {
         id: 12,
         title: "Modal And Sidebar",
-        image: sidebar,
-        component: <Main />
+        image: sidebar
     }, {
         id: 13,
         title: "Stripe Submenus",
-        image: stripe,
-        component: <StripeMenu />
+        image: stripe
     }, {
         id: 14,
         title: "Cart",
-        image: cart,
-        component: <Main />
+        image: cart
     }, {
         id: 15,
         title: "Cocktails",
-        image: cocktail,
-        component: <CockTails />
+        image: cocktail
     },
 ]
 

@@ -35,6 +35,25 @@
     --max-width: 1170px;
     --fixed-width: 450px;
     --clr-pink: #f28ab2;
+    --primaryLightColor: #d4e6a5;
+    --primaryColor: #476a2e;
+    --primaryDarkColor: #c02c03;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBackground: #f1f5f8;
+    --mainOverlay: rgba(35, 10, 36, 0.4);
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #afafaf;
+    --mainRed: #bd0303;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.3rem;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    --mainBorderRadius: 0.25rem;
+    --smallWidth: 85vw;
+    --maxWidth: 40rem;
+    --fullWidth: 1170px;
 }
 
 *,
@@ -134,9 +153,39 @@ p {
     }
 }
 
-main {
-    min-height: 100vh;
+.loading {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.error-page {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 5rem 0 !important;
+}
+
+.error-container {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.error-btn {
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    transition: var(--mainTransition);
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: var(--mainBorderRadius);
+    display: inline-block;
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    border-color: transparent;
+    margin-top: 3rem;
+
+    &:hover {
+        background: var(--primaryLightColor);
+        color: var(--primaryColor);
+    }
 }

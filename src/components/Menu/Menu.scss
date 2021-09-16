@@ -1,4 +1,9 @@
 #menubar {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .menu {
         padding: 5rem 0;
     }

@@ -1,4 +1,9 @@
 #accordion {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .container {
         width: 90vw;
         margin: 5rem auto;

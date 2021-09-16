@@ -1,36 +1,4 @@
-:root {
-    --primaryLightColor: #d4e6a5;
-    --primaryColor: #476a2e;
-    --primaryDarkColor: #c02c03;
-    --mainWhite: #fff;
-    --offWhite: #f7f7f7;
-    --mainBackground: #f1f5f8;
-    --mainOverlay: rgba(35, 10, 36, 0.4);
-    --mainBlack: #222;
-    --mainGrey: #ececec;
-    --darkGrey: #afafaf;
-    --mainRed: #bd0303;
-    --mainTransition: all 0.3s linear;
-    --mainSpacing: 0.3rem;
-    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-    --mainBorderRadius: 0.25rem;
-    --smallWidth: 85vw;
-    --maxWidth: 40rem;
-    --fullWidth: 1170px;
-}
-
-body {
-    color: var(--mainBlack);
-    background: var(--mainBackground);
-    line-height: 1.4;
-    font-size: 1rem;
-    font-weight: 300;
-}
-
 #cocktails {
-    display: block !important;
-
     img {
         width: 100%;
         display: block;
@@ -106,6 +74,15 @@ body {
         box-shadow: var(--lightShadow);
     }
 
+    .navbar {
+        display: flex;
+        align-items: center;
+        background: var(--mainWhite);
+        height: 5rem;
+        border-bottom: 2px solid var(--primaryColor);
+        box-shadow: var(--lightShadow);
+    }
+
     .nav-center {
         display: flex;
         justify-content: space-between;
@@ -152,16 +129,6 @@ body {
             letter-spacing: 2px;
             color: var(--mainBlack) !important;
         }
-    }
-
-    .error-page {
-        display: flex;
-        justify-content: center;
-    }
-
-    .error-container {
-        text-align: center;
-        text-transform: capitalize;
     }
 
     .section {
@@ -216,21 +183,25 @@ body {
 
     .cocktail-footer {
         padding: 1.5rem;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-weight: 300;
+        }
+
+        p {
+            color: var(--darkGrey);
+            margin-bottom: 0.5rem;
+        }
     }
 
     .cocktail-footer h3,
     .cocktail-footer h4,
     .cocktail-footer p {
         margin-bottom: 0.3rem;
-    }
-
-    .cocktail-footer h3 {
-        font-size: 2rem;
-    }
-
-    .cocktail-footer p {
-        color: var(--darkGrey);
-        margin-bottom: 0.5rem;
     }
 
     .search {
