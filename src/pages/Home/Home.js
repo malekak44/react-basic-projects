@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import data from './data';
+import projects from './data';
 import './Home.scss';
 import girl from './images/girl.jpg';
 
 export default function Home() {
-    const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-        setProjects(data);
-    }, []);
-
     return (
         <>
             <header className="home-header">
                 <div className="header-content">
                     <div className="text">
                         <h1>React Basic Projects</h1>
-                        <p>These are some of the basic projects of React that I have practiced. Without creating projects you cannot learn any programming language. So Practice is the main thing.</p>
-                        <button className="header-btn">Source Code</button>
+                        <p>These are some of the basic projects of React that I have practiced. These projects cover the basic level of ReactJS. And these are also quite suitable for beginners. I had fun while building these projects. So explore the projects!</p>
+                        <a href="https://github.com/malekak44">
+                            <button className="header-btn">My Github</button>
+                        </a>
                     </div>
                     <img src={girl} alt="girl" />
                 </div>

@@ -4,23 +4,17 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import Error from './components/Home/Error';
-import Home from './components/Home/Home';
-import Project from './components/Home/Project';
+import Home from './pages/Home/Home';
+import Project from './pages/Project';
+import Error from './pages/Error';
 
 export default function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route exact path="/:title">
-                    <Project />
-                </Route>
-                <Route path="*">
-                    <Error />
-                </Route>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/:project" component={Project}/>
+                <Route path="*" component={Error}/>
             </Switch>
         </Router>
     )

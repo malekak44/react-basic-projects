@@ -179,13 +179,12 @@ p {
     font-size: 0.8rem;
     border-radius: var(--mainBorderRadius);
     display: inline-block;
-    background: var(--primaryColor);
+    background: #016BA9;
     color: var(--mainWhite);
     border-color: transparent;
     margin-top: 3rem;
 
     &:hover {
-        background: var(--primaryLightColor);
-        color: var(--primaryColor);
+        background: #FFAC52;
     }
 }
